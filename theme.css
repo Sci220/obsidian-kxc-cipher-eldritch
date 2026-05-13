@@ -1,0 +1,340 @@
+/* ============================================================================
+   KXC Cipher Eldritch — Obsidian Theme
+   Re-skin of KXC Cipher (Korthcore) with the Eldritch palette
+   https://github.com/Korthcore (structure) — https://github.com/eldritch-theme (palette)
+
+   Readability-optimized: AAA for body text and H1-H3; AA accepted for H4-H6,
+   accent links, and decorative roles. See design spec for the full mapping.
+   ============================================================================ */
+
+.theme-dark {
+
+    /* ── Eldritch Palette Reference ─────────────────────────────────────────
+       Sunken Depths Grey      #212337    Shallow Depths Grey   #323449
+       Lighthouse White        #ebfafa    The Old One Purple    #7081d0
+       Great Old One Green     #37f499    Watery Tomb Blue      #04d1f9
+       Lovecraft Purple        #a48cf2    Dreaming Orange       #f7c67f
+       Pustule Pink            #f265b5    R'lyeh' Red           #f16c75
+       Gold of Yuggoth         #f1fc79
+       ────────────────────────────────────────────────────────────────────── */
+
+
+    /* ── Base Colour Scale ──────────────────────────────────────────────── */
+
+    --color-base-00: #1a1c2b;           /* deepest bg — code, ribbon, titlebar */
+    --color-base-05: #1d1f30;           /* between deepest and primary         */
+    --color-base-10: #212337;           /* Sunken Depths Grey — primary bg     */
+    --color-base-20: #323449;           /* Shallow Depths Grey — surface       */
+    --color-base-25: #3a3c54;           /* surface high — selected rows        */
+    --color-base-30: #444661;           /* border                              */
+    --color-base-35: #4d4f6c;           /* subtle border / guides              */
+    --color-base-40: #5a5c7a;           /* dim — placeholders                  */
+    --color-base-50: #7081d0;           /* The Old One Purple — muted text     */
+    --color-base-60: #a4b5d8;           /* between muted and fg                */
+    --color-base-70: #ebfafa;           /* Lighthouse White                    */
+    --color-base-100: #ebfafa;          /* Lighthouse White — primary text     */
+
+    --mono-rgb-0: 235, 250, 250;        /* fg as RGB                           */
+    --mono-rgb-100: 26, 28, 43;         /* deepest bg as RGB                   */
+
+
+    /* ── Accent Colour (Watery Tomb Blue) ───────────────────────────────── */
+    /* #04d1f9 = hsl(190, 97%, 50%) approx                                   */
+
+    --accent-h: 190;
+    --accent-s: 97%;
+    --accent-l: 50%;
+
+
+    /* ── Extended Colours ───────────────────────────────────────────────── */
+
+    --color-red:        #f16c75;
+    --color-red-rgb:    241, 108, 117;
+    --color-orange:     #f7c67f;
+    --color-orange-rgb: 247, 198, 127;
+    --color-yellow:     #f1fc79;
+    --color-yellow-rgb: 241, 252, 121;
+    --color-green:      #37f499;
+    --color-green-rgb:  55, 244, 153;
+    --color-cyan:       #04d1f9;
+    --color-cyan-rgb:   4, 209, 249;
+    --color-blue:       #04d1f9;
+    --color-blue-rgb:   4, 209, 249;
+    --color-purple:     #a48cf2;
+    --color-purple-rgb: 164, 140, 242;
+    --color-pink:       #f265b5;
+    --color-pink-rgb:   242, 101, 181;
+
+
+    /* ── Surface & Background ───────────────────────────────────────────── */
+
+    --background-primary:               #212337;
+    --background-primary-alt:           #323449;
+    --background-secondary:             #1a1c2b;
+    --background-secondary-alt:         #1d1f30;
+    --background-modifier-hover:        #3a3c54;
+    --background-modifier-active-hover: #444661;
+    --background-modifier-border:       #444661;
+    --background-modifier-border-hover: #4d4f6c;
+    --background-modifier-border-focus: #04d1f9;
+    --background-modifier-error:        #f16c7518;
+    --background-modifier-error-rgb:    241, 108, 117;
+    --background-modifier-error-hover:  #f16c7528;
+    --background-modifier-success:      #37f49918;
+    --background-modifier-success-rgb:  55, 244, 153;
+    --background-modifier-message:      #323449;
+    --background-modifier-form-field:   #212337;
+
+
+    /* ── Interactive Elements ───────────────────────────────────────────── */
+
+    --interactive-normal:       #323449;
+    --interactive-hover:        #3a3c54;
+    --interactive-accent:       #04d1f9;
+    --interactive-accent-hsl:   190, 97%, 50%;
+    --interactive-accent-hover: #00b8d8;
+
+
+    /* ── Text ───────────────────────────────────────────────────────────── */
+
+    --text-normal:              #ebfafa;
+    --text-muted:               #7081d0;
+    --text-faint:               #5a5c7a;
+    --text-on-accent:           #212337;
+    --text-on-accent-inverted:  #ebfafa;
+    --text-error:               #f16c75;
+    --text-warning:             #f7c67f;
+    --text-success:             #37f499;
+    --text-accent:              #04d1f9;
+    --text-accent-hover:        #5ee0fb;
+    --text-selection:           #32344980;
+    --text-highlight-bg:        #f7c67f30;
+
+    --caret-color:              #04d1f9;
+
+
+    /* ── Bold & Italic ──────────────────────────────────────────────────── */
+    /* Readability deviation: italic stays as text-normal — no purple tint. */
+
+    --bold-color:               #ebfafa;
+    --italic-color:             #ebfafa;
+
+
+    /* ── Heading Colours ────────────────────────────────────────────────── */
+
+    --h1-color:                 #04d1f9;   /* Watery Tomb Blue     7.6:1 AAA */
+    --h2-color:                 #37f499;   /* Great Old One Green  8.9:1 AAA */
+    --h3-color:                 #f7c67f;   /* Dreaming Orange      9.6:1 AAA */
+    --h4-color:                 #a48cf2;   /* Lovecraft Purple     5.3:1 AA  */
+    --h5-color:                 #f265b5;   /* Pustule Pink         5.1:1 AA  */
+    --h6-color:                 #7081d0;   /* The Old One Purple   4.5:1 AA  */
+
+
+    /* ── Links ──────────────────────────────────────────────────────────── */
+
+    --link-color:                       #04d1f9;
+    --link-color-hover:                 #5ee0fb;
+    --link-decoration:                  none;
+    --link-decoration-hover:            underline;
+    --link-external-color:              #a48cf2;
+    --link-external-color-hover:        #c1aef5;
+    --link-unresolved-color:            #f7c67f;
+    --link-unresolved-opacity:          0.8;
+    --link-unresolved-decoration-style: dashed;
+
+
+    /* ── Tags ───────────────────────────────────────────────────────────── */
+
+    --tag-color:                #a48cf2;
+    --tag-color-hover:          #c1aef5;
+    --tag-background:           #a48cf218;
+    --tag-background-hover:     #a48cf228;
+    --tag-border-color:         #a48cf240;
+    --tag-border-color-hover:   #c1aef560;
+    --tag-padding-x:            6px;
+    --tag-padding-y:            2px;
+    --tag-radius:               4px;
+
+
+    /* ── Code & Syntax Highlighting ─────────────────────────────────────── */
+
+    --code-background:          #1a1c2b;
+    --code-normal:              #ebfafa;
+    --code-comment:             #7081d0;
+    --code-function:            #f265b5;
+    --code-important:           #f16c75;
+    --code-keyword:             #a48cf2;
+    --code-operator:            #a48cf2;
+    --code-property:            #a48cf2;
+    --code-punctuation:         #7081d0;
+    --code-string:              #37f499;
+    --code-tag:                 #04d1f9;
+    --code-value:               #f7c67f;
+
+
+    /* ── Callouts ───────────────────────────────────────────────────────── */
+
+    --callout-default:          #7081d0;
+    --callout-info:             4, 209, 249;
+    --callout-todo:             164, 140, 242;
+    --callout-tip:              55, 244, 153;
+    --callout-success:          55, 244, 153;
+    --callout-question:         241, 252, 121;
+    --callout-warning:          247, 198, 127;
+    --callout-fail:             241, 108, 117;
+    --callout-error:            241, 108, 117;
+    --callout-bug:              241, 108, 117;
+    --callout-example:          164, 140, 242;
+    --callout-quote:            112, 129, 208;
+    --callout-summary:          55, 244, 153;
+    --callout-important:        164, 140, 242;
+    --callout-content-background: #21233700;
+    --callout-border-width:     2px;
+    --callout-radius:           6px;
+
+
+    /* ── Checkboxes ─────────────────────────────────────────────────────── */
+
+    --checkbox-color:           #04d1f9;
+    --checkbox-color-hover:     #5ee0fb;
+    --checkbox-marker-color:    #212337;
+    --checkbox-border-color:    #444661;
+    --checkbox-border-color-hover: #04d1f9;
+    --checklist-done-color:     #5a5c7a;
+    --checklist-done-decoration: line-through;
+
+
+    /* ── Scrollbar ──────────────────────────────────────────────────────── */
+
+    --scrollbar-bg:             #21233700;
+    --scrollbar-thumb-bg:       #a48cf233;
+    --scrollbar-active-thumb-bg: #a48cf255;
+
+
+    /* ── Tab & Navigation ───────────────────────────────────────────────── */
+
+    --tab-text-color:              #5a5c7a;
+    --tab-text-color-focused:      #ebfafa;
+    --tab-text-color-focused-active: #04d1f9;
+    --tab-text-color-focused-active-current: #04d1f9;
+    --tab-background-active:       #323449;
+    --tab-outline-color:           #04d1f900;
+
+    --titlebar-background:         #1a1c2b;
+    --titlebar-background-focused: #1a1c2b;
+    --titlebar-text-color:         #7081d0;
+    --titlebar-text-color-focused: #ebfafa;
+
+    --nav-item-color:              #7081d0;
+    --nav-item-color-hover:        #ebfafa;
+    --nav-item-color-active:       #04d1f9;
+    --nav-item-color-selected:     #04d1f9;
+    --nav-item-background-hover:   #3a3c54;
+    --nav-item-background-active:  #3a3c54;
+    --nav-item-background-selected: #3a3c54;
+
+    --nav-heading-color:           #7081d0;
+    --nav-collapse-icon-color:     #5a5c7a;
+    --nav-indentation-guide-color: #444661;
+
+
+    /* ── Status Bar ─────────────────────────────────────────────────────── */
+
+    --status-bar-background:       #1a1c2b;
+    --status-bar-border-color:     #444661;
+    --status-bar-text-color:       #7081d0;
+    --status-bar-scroll-text-color: #a48cf2;
+
+
+    /* ── Ribbon ─────────────────────────────────────────────────────────── */
+
+    --ribbon-background:           #1a1c2b;
+    --ribbon-background-collapsed: #1a1c2b;
+
+
+    /* ── Divider ────────────────────────────────────────────────────────── */
+
+    --divider-color:               #444661;
+    --divider-color-hover:         #04d1f9;
+
+
+    /* ── Prompt / Modal ─────────────────────────────────────────────────── */
+
+    --prompt-border-color:         #444661;
+
+    --modal-background:            #212337;
+    --modal-border-color:          #444661;
+
+    --dialog-background:           #212337;
+    --dialog-border-color:         #444661;
+
+
+    /* ── Toggle ─────────────────────────────────────────────────────────── */
+
+    --toggle-border-width:         2px;
+    --toggle-thumb-color:          #ebfafa;
+
+
+    /* ── Graph View ─────────────────────────────────────────────────────── */
+
+    --graph-line:                  #44466180;
+    --graph-node:                  #7081d0;
+    --graph-node-focused:          #04d1f9;
+    --graph-node-tag:              #a48cf2;
+    --graph-node-attachment:       #37f499;
+    --graph-node-unresolved:       #f7c67f;
+
+
+    /* ── Table ──────────────────────────────────────────────────────────── */
+
+    --table-header-background:     #323449;
+    --table-header-background-hover: #3a3c54;
+    --table-row-even-background:   #1a1c2b08;
+    --table-row-odd-background:    #21233700;
+    --table-row-background-hover:  #3a3c5440;
+    --table-border-color:          #444661;
+
+
+    /* ── Indentation Guides ─────────────────────────────────────────────── */
+
+    --indentation-guide-color:         #444661;
+    --indentation-guide-color-active:  #7081d0;
+
+
+    /* ── Embed ──────────────────────────────────────────────────────────── */
+
+    --embed-border-left:           2px solid #a48cf2;
+    --embed-background:            #32344920;
+
+
+    /* ── Blockquote ─────────────────────────────────────────────────────── */
+
+    --blockquote-border-color:     #a48cf260;
+    --blockquote-border-thickness: 3px;
+    --blockquote-font-style:       normal;
+    --blockquote-color:            #7081d0;
+
+
+    /* ── Horizontal Rule ────────────────────────────────────────────────── */
+
+    --hr-color:                    #444661;
+
+
+    /* ── Inline Title ───────────────────────────────────────────────────── */
+
+    --inline-title-color:          #04d1f9;
+
+
+    /* ── Vault Name ─────────────────────────────────────────────────────── */
+
+    --vault-name-color:            #a48cf2;
+    --vault-name-font-size:        var(--font-ui-small);
+
+
+    /* ── Icon ───────────────────────────────────────────────────────────── */
+
+    --icon-color:                  #7081d0;
+    --icon-color-hover:            #ebfafa;
+    --icon-color-active:           #04d1f9;
+    --icon-color-focused:          #04d1f9;
+}
