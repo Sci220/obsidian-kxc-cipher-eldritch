@@ -122,12 +122,12 @@
 
     /* ── Heading Colours ────────────────────────────────────────────────── */
 
-    --h1-color:                 #04d1f9;   /* Watery Tomb Blue     7.6:1 AAA */
-    --h2-color:                 #37f499;   /* Great Old One Green  8.9:1 AAA */
-    --h3-color:                 #f7c67f;   /* Dreaming Orange      9.6:1 AAA */
-    --h4-color:                 #a48cf2;   /* Lovecraft Purple     5.3:1 AA  */
-    --h5-color:                 #f265b5;   /* Pustule Pink         5.1:1 AA  */
-    --h6-color:                 #7081d0;   /* The Old One Purple   4.5:1 AA  */
+    --h1-color:                 #04d1f9;   /* Watery Tomb Blue          8.45:1 AAA */
+    --h2-color:                 #37f499;   /* Great Old One Green      10.71:1 AAA */
+    --h3-color:                 #f7c67f;   /* Dreaming Orange           9.81:1 AAA */
+    --h4-color:                 #a48cf2;   /* Lovecraft Purple          5.60:1 AA  */
+    --h5-color:                 #f265b5;   /* Pustule Pink              5.37:1 AA  */
+    --h6-color:                 #7d8dd5;   /* Lifted Old One Purple     ~4.9:1 AA  */
 
 
     /* ── Links ──────────────────────────────────────────────────────────── */

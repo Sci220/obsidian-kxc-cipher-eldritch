@@ -6,19 +6,20 @@ Lovecraftian deep-oceanic tones with WCAG AAA body text and H1-H3 headings.
 
 ## Palette
 
-| Colour              | Hex       | Contrast on `#212337` | Role                                  |
-|---------------------|-----------|-----------------------|---------------------------------------|
-| Sunken Depths Grey  | `#212337` | —                     | Primary editor background             |
-| Shallow Depths Grey | `#323449` | —                     | Panels, line highlight, modals        |
-| Lighthouse White    | `#ebfafa` | 13.5:1 AAA            | Primary text, bold, italic            |
-| Watery Tomb Blue    | `#04d1f9` | 7.6:1 AAA             | Accent, links, H1, checkboxes, caret  |
-| Great Old One Green | `#37f499` | 8.9:1 AAA             | H2, strings, success                  |
-| Dreaming Orange     | `#f7c67f` | 9.6:1 AAA             | H3, numbers, warnings, unresolved     |
-| Lovecraft Purple    | `#a48cf2` | 5.3:1 AA              | H4, tags, keywords, external links    |
-| Pustule Pink        | `#f265b5` | 5.1:1 AA              | H5, functions                         |
-| The Old One Purple  | `#7081d0` | 4.5:1 AA              | H6, muted text, comments              |
-| R'lyeh' Red         | `#f16c75` | 5.4:1 AA              | Errors, danger callouts               |
-| Gold of Yuggoth     | `#f1fc79` | 12.4:1 AAA            | Question callouts, highlights         |
+| Colour                     | Hex       | Contrast on `#212337` | Role                                     |
+|----------------------------|-----------|-----------------------|------------------------------------------|
+| Sunken Depths Grey         | `#212337` | —                     | Primary editor background                |
+| Shallow Depths Grey        | `#323449` | —                     | Panels, line highlight, modals           |
+| Lighthouse White           | `#ebfafa` | 14.40:1 AAA           | Primary text, bold, italic               |
+| Watery Tomb Blue           | `#04d1f9` | 8.45:1 AAA            | Accent, links, H1, checkboxes, caret     |
+| Great Old One Green        | `#37f499` | 10.71:1 AAA           | H2, strings, success                     |
+| Dreaming Orange            | `#f7c67f` | 9.81:1 AAA            | H3, numbers, warnings, unresolved        |
+| Lovecraft Purple           | `#a48cf2` | 5.60:1 AA             | H4, tags, keywords, external links       |
+| Pustule Pink               | `#f265b5` | 5.37:1 AA             | H5, functions                            |
+| Lifted Old One Purple (H6) | `#7d8dd5` | ~4.9:1 AA             | H6 (AA heading)                          |
+| The Old One Purple         | `#7081d0` | 4.22:1 (large AA)     | Muted text, comments, nav, graph default |
+| R'lyeh' Red                | `#f16c75` | 5.25:1 AA             | Errors, danger callouts                  |
+| Gold of Yuggoth            | `#f1fc79` | 13.92:1 AAA           | Question callouts, highlights            |
 
 ## Install
 
