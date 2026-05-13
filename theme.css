@@ -338,3 +338,19 @@
     --icon-color-active:           #04d1f9;
     --icon-color-focused:          #04d1f9;
 }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Error tooltip / message readability fix.
+   Obsidian's defaults set `.tooltip.mod-error` and `.message.mod-error` to
+   `color: var(--text-on-accent)`. That works for opaque bright accents but
+   collapses here because `--background-modifier-error` is the red at ~9% alpha
+   over our dark bg (≈ #352a3d wine), and `--text-on-accent` is #212337 —
+   dark text on dark wine bg is unreadable. Use foreground white instead.
+   ───────────────────────────────────────────────────────────────────────── */
+.theme-dark .tooltip.mod-error,
+.theme-dark .message.mod-error {
+    color: var(--text-normal);
+}
+.theme-dark .message.mod-error a {
+    color: var(--text-accent);
+}
