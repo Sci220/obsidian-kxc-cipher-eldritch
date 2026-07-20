@@ -354,3 +354,19 @@
 .theme-dark .message.mod-error a {
     color: var(--text-accent);
 }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Destructive button readability fix (e.g. "Uninstall" in plugin dialogs).
+   Same collapse as above: Obsidian gives `button.mod-warning` the
+   `--background-modifier-error` bg (our red at ~9% alpha → dark wine) with
+   `--text-on-accent` (#212337) text — dark on dark. Restore a solid R'lyeh
+   Red button with dark text, mirroring the accent-button style.
+   ───────────────────────────────────────────────────────────────────────── */
+.theme-dark button.mod-warning {
+    background-color: var(--color-red);
+    color: var(--text-on-accent);
+}
+.theme-dark button.mod-warning:hover {
+    background-color: #f5878f;
+    color: var(--text-on-accent);
+}
