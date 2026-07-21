@@ -370,3 +370,14 @@
     background-color: #f5878f;
     color: var(--text-on-accent);
 }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Conflicting-hotkey chip readability fix (Settings → Hotkeys).
+   Same collapse again: `.setting-hotkey.has-conflict` gets the translucent
+   `--background-modifier-error` bg with dark `--text-on-accent` text.
+   Chips are status, not actions — keep the wine bg and use R'lyeh Red text,
+   matching the tag chip language (colored text on translucent same-color bg).
+   ───────────────────────────────────────────────────────────────────────── */
+.theme-dark .setting-hotkey.has-conflict {
+    color: var(--color-red);
+}
