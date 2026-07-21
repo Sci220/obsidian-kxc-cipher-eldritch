@@ -381,3 +381,36 @@
 .theme-dark .setting-hotkey.has-conflict {
     color: var(--color-red);
 }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Sweep of all remaining `--text-on-accent` collapses (Obsidian 1.12.7).
+   Every core rule pairing dark --text-on-accent with a translucent
+   error/success bg or a dark surface, fixed with the established recipes:
+   status chips → same-hue bright text; message bodies → foreground white.
+   ───────────────────────────────────────────────────────────────────────── */
+.theme-dark .setting-delete-hotkey:hover {          /* ✕ on hotkey chips     */
+    color: var(--color-red);
+}
+.theme-dark .message.mod-success {                  /* green message banner  */
+    color: var(--text-normal);
+}
+.theme-dark .changelog-item.mod-success:before {    /* sync changelog marks  */
+    color: var(--color-green);
+}
+.theme-dark .changelog-item.mod-failed:before {
+    color: var(--color-red);
+}
+.theme-dark .recent-vaults-list-item:hover {        /* bg is #3a3c54 surface */
+    color: var(--text-normal);
+}
+
+/* Canvas themed-group labels: Obsidian assumes --text-on-accent is LIGHT
+   (default white) and -inverted is dark. This theme defines them the other
+   way around (dark text for the bright cyan accent), so the two foreground
+   classes land swapped. Swap them back to what the class names intend.    */
+.theme-dark .canvas-node-group.is-themed .canvas-group-label:not([contenteditable="true"]).mod-foreground-light {
+    color: var(--text-on-accent-inverted);          /* #ebfafa — light       */
+}
+.theme-dark .canvas-node-group.is-themed .canvas-group-label:not([contenteditable="true"]).mod-foreground-dark {
+    color: var(--text-on-accent);                   /* #212337 — dark        */
+}
