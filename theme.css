@@ -371,6 +371,19 @@
     color: var(--text-on-accent);
 }
 
+/* Obsidian 1.13+ renamed confirm-dialog buttons to `mod-destructive`.
+   The `.mod-cta` variant (e.g. "Uninstall" confirm) repeats the same
+   collapse — translucent error bg + dark --text-on-accent text. The plain
+   variant is fine (uses --text-error). Apply the same solid-red recipe. */
+.theme-dark button.mod-destructive.mod-cta {
+    background-color: var(--color-red);
+    color: var(--text-on-accent);
+}
+.theme-dark button.mod-destructive.mod-cta:hover {
+    background-color: #f5878f;
+    color: var(--text-on-accent);
+}
+
 /* ─────────────────────────────────────────────────────────────────────────────
    Conflicting-hotkey chip readability fix (Settings → Hotkeys).
    Same collapse again: `.setting-hotkey.has-conflict` gets the translucent
@@ -402,6 +415,28 @@
 }
 .theme-dark .recent-vaults-list-item:hover {        /* bg is #3a3c54 surface */
     color: var(--text-normal);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Obsidian 1.13 settings redesign: the "Errors" filter pill (Community
+   plugins) repeats the collapse — active state pairs the translucent
+   --background-modifier-error bg with dark --text-on-accent text. Make the
+   active pill solid R'lyeh Red with dark text, mirroring the accent pill.
+   Its count badge inverts to a dark --text-on-accent bg with the translucent
+   error red as TEXT (~9% alpha → invisible) — use bright red text instead.
+   ───────────────────────────────────────────────────────────────────────── */
+.theme-dark .setting-group-filter.mod-error.is-active {
+    background-color: var(--color-red);
+    border-color: var(--color-red);
+    color: var(--text-on-accent);
+}
+.theme-dark .setting-group-filter.mod-error.is-active:hover {
+    background-color: #f5878f;
+    border-color: #f5878f;
+    color: var(--text-on-accent);
+}
+.theme-dark .is-active .setting-group-filter-badge {
+    color: var(--color-red);
 }
 
 /* Canvas themed-group labels: Obsidian assumes --text-on-accent is LIGHT
