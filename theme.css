@@ -449,3 +449,13 @@
 .theme-dark .canvas-node-group.is-themed .canvas-group-label:not([contenteditable="true"]).mod-foreground-dark {
     color: var(--text-on-accent);                   /* #212337 — dark        */
 }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Editor line numbers: core paints the gutter with --text-faint (#5a5c7a),
+   too dim on the Sunken Depths bg (~2.6:1). Lift one step toward
+   --text-muted, keeping the slate-violet hue. The core rule carries
+   !important, so this must too.
+   ───────────────────────────────────────────────────────────────────────── */
+.theme-dark .markdown-source-view.mod-cm6 .cm-gutters {
+    color: #7a7ea6 !important;
+}
