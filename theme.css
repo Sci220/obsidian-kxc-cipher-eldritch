@@ -279,7 +279,11 @@
     --modal-background:            #212337;
     --modal-border-color:          #444661;
 
-    --dialog-background:           #212337;
+    /* --dialog-* is NOT Obsidian — it's the bundled pdf.js viewer's dialog
+       (password prompt, find bar). Obsidian's own dialogs use --modal-*
+       above. The var pdf.js reads is --dialog-bg-color; --dialog-background
+       was never read by anything. */
+    --dialog-bg-color:             #212337;
     --dialog-border-color:         #444661;
 
 
@@ -303,8 +307,12 @@
 
     --table-header-background:     #323449;
     --table-header-background-hover: #3a3c54;
-    --table-row-even-background:   #1a1c2b08;
-    --table-row-odd-background:    #21233700;
+    /* Core collapsed even/odd into a single alt-row var; the old pair is no
+       longer read. The previous values (3% and 0% alpha) were effectively
+       invisible, so porting them verbatim would have been a no-op — this is
+       the deepest bg at 25%, a stripe you can actually see. Set it to
+       `transparent` for unstriped tables. */
+    --table-row-alt-background:    #1a1c2b40;
     --table-row-background-hover:  #3a3c5440;
     --table-border-color:          #444661;
 
@@ -341,8 +349,12 @@
 
     /* ── Vault Name ─────────────────────────────────────────────────────── */
 
-    --vault-name-color:            #a48cf2;
-    --vault-name-font-size:        var(--font-ui-small);
+    /* Renamed in core: --vault-name-* → --vault-profile-*. The old names
+       were silently ignored, so the sidebar vault name had fallen back to
+       --vault-profile-color's default (--text-normal, plain white). */
+    --vault-profile-color:         #a48cf2;
+    --vault-profile-color-hover:   #c1aef5;
+    --vault-profile-font-size:     var(--font-ui-small);
 
 
     /* ── Icon ───────────────────────────────────────────────────────────── */
