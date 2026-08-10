@@ -173,22 +173,31 @@
 
 
     /* ── Callouts ───────────────────────────────────────────────────────── */
+    /* MUST be real colours, not `r, g, b` triplets. Obsidian dropped the
+       old `rgba(var(--callout-color), 0.1)` form; 1.13 composes callouts
+       with `color-mix(in oklch, var(--callout-color) 10%, transparent)` for
+       the body tint and `color: var(--callout-color)` for the title. A bare
+       triplet is not a <color>, so both declarations are dropped at parse
+       time — the tint vanishes and the title falls back to inherited white,
+       leaving every callout type looking identical. Keep these as hex.
+       Core then derives, per type: body tint at 10%, border at
+       --callout-border-opacity (0.25) — hence the visible 2px tinted rule. */
 
     --callout-default:          #7081d0;
-    --callout-info:             4, 209, 249;
-    --callout-todo:             164, 140, 242;
-    --callout-tip:              55, 244, 153;
-    --callout-success:          55, 244, 153;
-    --callout-question:         241, 252, 121;
-    --callout-warning:          247, 198, 127;
-    --callout-fail:             241, 108, 117;
-    --callout-error:            241, 108, 117;
-    --callout-bug:              241, 108, 117;
-    --callout-example:          164, 140, 242;
-    --callout-quote:            112, 129, 208;
-    --callout-summary:          55, 244, 153;
-    --callout-important:        164, 140, 242;
-    --callout-content-background: #21233700;
+    --callout-info:             #04d1f9;
+    --callout-todo:             #a48cf2;
+    --callout-tip:              #37f499;
+    --callout-success:          #37f499;
+    --callout-question:         #f1fc79;
+    --callout-warning:          #f7c67f;
+    --callout-fail:             #f16c75;
+    --callout-error:            #f16c75;
+    --callout-bug:              #f16c75;
+    --callout-example:          #a48cf2;
+    --callout-quote:            #7081d0;
+    --callout-summary:          #37f499;
+    --callout-important:        #a48cf2;
+    --callout-content-background: transparent;
     --callout-border-width:     2px;
     --callout-radius:           6px;
 
