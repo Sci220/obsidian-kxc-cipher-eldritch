@@ -114,10 +114,15 @@
 
 
     /* ── Bold & Italic ──────────────────────────────────────────────────── */
-    /* Readability deviation: italic stays as text-normal — no purple tint. */
+    /* Warm/cool split so the two emphases are told apart by hue, not just
+       weight/slant. Both clear AAA on --background-primary (#212337):
+         bold   Gold of Yuggoth              13.92:1
+         italic Lovecraft Purple, lifted      7.82:1
+       Italic uses the lifted #c1aef5 rather than base #a48cf2 (5.60:1) —
+       running body emphasis needs more headroom than a heading does. */
 
-    --bold-color:               #ebfafa;
-    --italic-color:             #ebfafa;
+    --bold-color:               #f1fc79;
+    --italic-color:             #c1aef5;
 
 
     /* ── Heading Colours ────────────────────────────────────────────────── */
